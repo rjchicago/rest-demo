@@ -1,0 +1,19 @@
+services:
+  rest-demo:
+    container_name: rest-demo
+    build:
+      context: .
+      target: development
+    environment:
+      NODE_ENV: development
+    volumes:
+      - ./package.json:/usr/app/package.json
+      - ./config:/usr/app/config
+      - ./src:/usr/app/src
+    ports:
+      - "3001:3001"
+      - "9223:9223"
+    expose:
+      - "9223"
+    entrypoint: ["npm", "run", "debug"]
+    

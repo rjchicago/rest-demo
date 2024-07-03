@@ -1,0 +1,6 @@
+{
+  "url": "localhost",
+  "path_prefix": "",
+  "internal_port": 3001,
+  "external_port": 3001
+}
